@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(to right, #ffe0f0, #fff0f9);
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff69b4;
+  margin-bottom: 30px;
+}
+
+.photobooth video {
+  border-radius: 20px;
+  width: 400px;
+  height: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.cute-button {
+  background-color: #ffaad4;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s ease;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+}
+
+.cute-button:hover {
+  background-color: #ff6fa4;
+  transform: scale(1.05);
+}
+
+.selfie-preview {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff0f9;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.selfie-preview img {
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1em;
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: white;
+  background: linear-gradient(135deg, #ff6fb5, #ff3b6f);
+  padding: 12px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.6);
+  transition: all 0.3s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.back-link:hover {
+  background: linear-gradient(135deg, #ff3b6f, #ff6fb5);
+  box-shadow: 0 8px 20px rgba(255, 60, 120, 0.8);
+  transform: translateY(-3px);
+}
+
+.back-link:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(255, 60, 120, 0.5);
+}
+
+.btn-back-home {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff8bc4, #ff4a91);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(255, 74, 145, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.btn-back-home:hover {
+  background: linear-gradient(135deg, #ff4a91, #ff8bc4);
+  box-shadow: 0 8px 20px rgba(255, 74, 145, 0.8);
+  transform: translateY(-3px);
+}
+
+.btn-back-home:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(255, 74, 145, 0.5);
+}

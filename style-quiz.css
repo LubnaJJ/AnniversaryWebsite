@@ -1,0 +1,107 @@
+body {
+  background: #fff3f8;
+  font-family: 'Comic Sans MS', cursive;
+  color: #333;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery img {
+  max-height: 200px;
+  width: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 3em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #ff4a91;
+  transform: scale(1.05);
+}
+
+.btn-back-home {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff8bc4, #ff4a91);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(255, 74, 145, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.btn-back-home:hover {
+  background: linear-gradient(135deg, #ff4a91, #ff8bc4);
+  box-shadow: 0 8px 20px rgba(255, 74, 145, 0.8);
+  transform: translateY(-3px);
+}
+
+.btn-back-home:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(255, 74, 145, 0.5);
+}

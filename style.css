@@ -1,0 +1,140 @@
+body {
+  background: linear-gradient(to right, #ffe4ec, #ffc1de);
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+h1, p {
+  color: #ff69b4;
+}
+
+.nav {
+  margin-top: 40px;
+}
+
+.nav a {
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #fff;
+  background: #ffb6c1;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover {
+  background: #ff6f91;
+  transform: scale(1.1);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 2s 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+.letter {
+  padding: 30px;
+  margin: auto;
+  width: 80%;
+  background: #fff0f5;
+  border-radius: 20px;
+  color: #d63384;
+  font-size: 1.1em;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+
+
+
+.photobooth {
+  margin-top: 30px;
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+video {
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.cute-button {
+  background-color: #ffaad4;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s ease;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+}
+
+.cute-button:hover {
+  background-color: #ff6fa4;
+  transform: scale(1.05);
+}
+
+.selfie-preview {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffe0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+.selfie-preview img {
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+

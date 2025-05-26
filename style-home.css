@@ -1,0 +1,104 @@
+/* Use a clean, normal sans-serif font */
+body {
+  background: linear-gradient(to right, #ffdde1, #f7bbf3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.8em;
+  color: #d6336c;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #7a2a4d;
+}
+
+/* Nav links stacked vertically with spacing */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Style links as big buttons */
+.btn-link {
+  background-color: #ff6f91;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(255, 111, 145, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+  display: block; /* full width in container */
+  text-align: center;
+}
+
+.btn-link:hover {
+  background-color: #ff3b6f;
+  transform: scale(1.05);
+}
+
+.btn-link:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 10px rgba(255, 59, 111, 0.6);
+}
+
+/* Fade in animations (optional) */
+.fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.fade-in-delay {
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.hearts::before,
+.hearts::after {
+  content: "💖";
+  font-size: 2rem;
+  position: fixed;
+  animation: floatHearts 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(100vh) scale(1);
+    left: 50%;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    left: calc(50% + 100px);
+  }
+}

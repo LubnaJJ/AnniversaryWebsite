@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo booth</title>
+  <link rel="stylesheet" href="style-photobooth.css" />
+</head>
+<body>
+  <h1>Take a picture soooonnn</h1>
+
+  <div class="photobooth">
+    <video id="video" autoplay playsinline></video>
+    <br />
+    <button class="cute-button" onclick="takePhoto()">📷 Take Selfie</button>
+  </div>
+
+  <div id="preview" class="selfie-preview" style="display: none;">
+    <h2>✨ Your Selfie! ✨</h2>
+    <img id="photoPreview" alt="Your Selfie" />
+    <br />
+    <a id="downloadLink" class="cute-button" download="selfie.png">💾 Save to Device</a>
+  </div>
+
+  <br />
+  <a href="index.html" class="btn-back-home">Back Home</a>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

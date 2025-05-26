@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memories 📸</title>
+  <link rel="stylesheet" href="style-quiz.css">
+</head>
+<body>
+  <h1>💞 Your wife loves you (meeeee)💞</h1>
+
+  <div class="gallery">
+    <!-- Images will be generated dynamically via JS -->
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Preview">
+    <a id="download-btn" class="download-btn" href="#" download>📥 Download</a>
+  </div>
+
+  <a href="index.html" class="btn-back-home">⬅️ Back Home</a>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const downloadBtn = document.getElementById('download-btn');
+    const galleryDiv = document.querySelector('.gallery');
+
+    // Dynamically load all 44 images
+    for (let i = 1; i <= 44; i++) {
+      const img = document.createElement('img');
+      img.src = `images/${i}.jpeg`;
+      img.alt = `Memory ${i}`;
+      img.classList.add('gallery-img');
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        downloadBtn.href = img.src;
+
+        // Ask if they want to download
+        setTimeout(() => {
+          const confirmDownload = confirm("Do you want to download this image?");
+          if (confirmDownload) {
+            downloadBtn.click();
+          }
+        }, 100);
+      });
+      galleryDiv.appendChild(img);
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+  </script>
+</body>
+</html>

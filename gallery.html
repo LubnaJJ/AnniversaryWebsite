@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Selfie Gallery 📸</title>
+  <link rel="stylesheet" href="style-gallery.css" />
+</head>
+<body>
+  <h1>Look at my bautiful maaannn</h1>
+  <div class="gallery" id="gallery"></div>
+
+  <br />
+  <a href="photobooth.html" class="back-link">⬅️ Back to Photobooth</a>
+
+  <br><br><br>
+  <a href="index.html" class="btn-back-home">Back Home</a>
+
+
+  <script>
+    const gallery = document.getElementById('gallery');
+
+    function loadSelfies() {
+      const selfies = JSON.parse(localStorage.getItem('selfies') || '[]');
+
+      if (selfies.length === 0) {
+        gallery.innerHTML = "<p>You haven't taken any selfies yetttt goo take someee Ahmad Aqeel Arooosss</p>";
+        return;
+      }
+
+      gallery.innerHTML = '';
+      selfies.forEach((dataURL, index) => {
+        const container = document.createElement('div');
+        container.className = 'selfie-container fade-in';
+
+        // Create image
+        const img = document.createElement('img');
+        img.src = dataURL;
+        img.alt = `Selfie ${index + 1}`;
+
+        // Create delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerText = '❌ Delete';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = () => {
+          if (confirm('Dont you Dare delete anything, PRESS CANCEL!')) {
+            deleteSelfie(index);
+          }
+        };
+
+        container.appendChild(img);
+        container.appendChild(deleteBtn);
+        gallery.appendChild(container);
+      });
+    }
+
+    function deleteSelfie(index) {
+      let selfies = JSON.parse(localStorage.getItem('selfies') || '[]');
+      selfies.splice(index, 1); // Remove selfie at index
+      localStorage.setItem('selfies', JSON.stringify(selfies));
+      loadSelfies();
+    }
+
+    loadSelfies();
+  </script>
+</body>
+</html>

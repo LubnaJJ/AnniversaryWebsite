@@ -1,0 +1,119 @@
+body {
+  background: linear-gradient(to right, #ffe5f9, #ffe9ec);
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff69b4;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Container for each selfie + delete button */
+.selfie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  background: #fff0f9;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.selfie-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border: 3px solid #ffaad4;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+}
+
+.delete-btn {
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 6px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.7);
+}
+
+.delete-btn:hover {
+  background-color: #ff3b6f;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.gallery p {
+  font-size: 1.3em;
+  color: #aa6699;
+  margin-top: 40px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1em;
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+.btn-back-home {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff8bc4, #ff4a91);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(255, 74, 145, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-back-home:hover {
+  background: linear-gradient(135deg, #ff4a91, #ff8bc4);
+  box-shadow: 0 8px 20px rgba(255, 74, 145, 0.8);
+  transform: translateY(-3px);
+}
+
+.btn-back-home:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(255, 74, 145, 0.5);
+}
