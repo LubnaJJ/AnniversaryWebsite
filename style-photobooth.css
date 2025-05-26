@@ -14,10 +14,19 @@ h1 {
 
 .photobooth video {
   border-radius: 20px;
-  width: 300px;
+  width: 300px; /* Default desktop size */
   height: auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   margin-bottom: 15px;
+}
+
+/* Responsive for small screens (phones) */
+@media (max-width: 480px) {
+  .photobooth video {
+    width: 90vw; /* 90% of viewport width */
+    max-width: 300px; /* Don't exceed desktop width */
+    height: auto;
+  }
 }
 
 .cute-button {
